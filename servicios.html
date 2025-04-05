@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotas Felices</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Estilos adicionales opcionales -->
+    <style>
+        .card:hover {
+            transform: scale(1.03);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagenes/log.jpg" alt="Logo de Mascotas Felices" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de servicios -->
+    <section class="container my-5" id="servicios">
+        <h2 class="text-center mb-5">Nuestros Servicios</h2>
+        <div class="row g-4">
+            <!-- Servicio 1 - Peluquería -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4">
+                    <div class="card-body text-center">
+                        <i class="bi bi-scissors fs-1 text-primary"></i>
+                        <h5 class="card-title mt-3">Peluquería Canina</h5>
+                        <p class="card-text">Servicio profesional incluyendo:</p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check-circle text-success"></i> Baño terapéutico</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Corte de pelo</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Corte de uñas</li>
+                        </ul>
+                        <button class="btn btn-outline-primary mt-3" data-bs-toggle="modal" data-bs-target="#servicioModal" data-servicio="Peluquería">
+                            Más información
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 2 - Veterinaria -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4">
+                    <div class="card-body text-center">
+                        <i class="bi bi-heart-pulse fs-1 text-danger"></i>
+                        <h5 class="card-title mt-3">Servicio Veterinario</h5>
+                        <p class="card-text">Ofrecemos:</p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check-circle text-success"></i> Consultas generales</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Vacunación</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Cirugías menores</li>
+                        </ul>
+                        <button class="btn btn-outline-danger mt-3" data-bs-toggle="modal" data-bs-target="#servicioModal" data-servicio="Veterinaria">
+                            Más información
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 3 - Guardería -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4">
+                    <div class="card-body text-center">
+                        <i class="bi bi-house-door fs-1 text-warning"></i>
+                        <h5 class="card-title mt-3">Guardería Canina</h5>
+                        <p class="card-text">Beneficios:</p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check-circle text-success"></i> Espacio seguro</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Paseos diarios</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Alimentación incluida</li>
+                        </ul>
+                        <button class="btn btn-outline-warning mt-3" data-bs-toggle="modal" data-bs-target="#servicioModal" data-servicio="Guardería">
+                            Más información
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de servicios -->
+    <div class="modal fade" id="servicioModal" tabindex="-1" aria-labelledby="servicioModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-3">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="servicioModalLabel">Detalles del Servicio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Contenido dinámico se insertará aquí -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="contacto.html" class="btn btn-primary">Contactar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para manejar el contenido del modal -->
+    <script>
+        const servicioModal = document.getElementById('servicioModal');
+        servicioModal.addEventListener('show.bs.modal', function(event) {
+            const button = event.relatedTarget;
+            const servicio = button.getAttribute('data-servicio');
+            const modalBody = servicioModal.querySelector('.modal-body');
+
+            let contenido = '';
+            switch (servicio) {
+                case 'Peluquería':
+                    contenido = `
+                        <h5>Peluquería Canina Profesional</h5>
+                        <p>Servicio completo que incluye:</p>
+                        <ul>
+                            <li>Baño con productos hipoalergénicos</li>
+                            <li>Corte de pelo a medida</li>
+                            <li>Limpieza de oídos y corte de uñas</li>
+                        </ul>
+                        <p><strong>Precio:</strong> Desde 80 Bs.</p>`;
+                    break;
+                case 'Veterinaria':
+                    contenido = `
+                        <h5>Atención Veterinaria</h5>
+                        <p>Servicios disponibles:</p>
+                        <ul>
+                            <li>Consultas generales: 50 Bs.</li>
+                            <li>Vacunaciones: 100 Bs.</li>
+                            <li>Urgencias 24 horas</li>
+                        </ul>`;
+                    break;
+                case 'Guardería':
+                    contenido = `
+                        <h5>Guardería Canina</h5>
+                        <p>Paquetes disponibles:</p>
+                        <ul>
+                            <li>Día completo: 40 Bs.</li>
+                            <li>Noche completa: 60 Bs.</li>
+                            <li>Paquete semanal: 300 Bs.</li>
+                        </ul>`;
+                    break;
+            }
+
+            modalBody.innerHTML = contenido;
+        });
+    </script>
+</body>
+</html>
